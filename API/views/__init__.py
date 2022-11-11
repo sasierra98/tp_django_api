@@ -1,2 +1,2 @@
 from .PositionView import PositionView, PositionDetailView
-from .ConsultantView import ConsultantView, ConsultantDetailView
+from .EmployeeView import EmployeeView, EmployeeDetailView

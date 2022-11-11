@@ -1,2 +1,2 @@
 from .Position import Position
-from .Consultant import Consultant
+from .Employee import Employee

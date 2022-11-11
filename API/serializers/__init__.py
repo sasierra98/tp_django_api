@@ -1,2 +1,2 @@
 from .PositionSerializer import PositionSerializer
-from .ConsultantSerializer import ConsultantSerializer
+from .EmployeeSerializer import ConsultantSerializer
