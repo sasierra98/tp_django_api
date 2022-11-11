@@ -33,7 +33,7 @@ DEBUG = env('DEBUG')
 #ALLOWED CONNECTIONS:
 print(env('NAME_DB'), type(env.list('CORS_ALLOWED_ORIGINS')))
 ALLOWED_HOSTS = env.list('ALLOWED_HOST')
-CORS_ALLOWED_ORIGINS = env.tuple('CORS_ALLOWED_ORIGINS')
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
