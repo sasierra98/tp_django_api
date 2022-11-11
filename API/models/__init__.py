@@ -1,2 +1,3 @@
 from .Position import Position
-from .Employee import Employee
+from .CategoryCompetition import CategoryCompetition
+from .Participant import Participant

@@ -1,18 +1,18 @@
 from rest_framework import serializers, fields
 from rest_framework.exceptions import ValidationError
 
-from API.models import Employee
+from API.models import Participant
 
 
-class ConsultantSerializer(serializers.ModelSerializer):
+class ParticipantSerializer(serializers.ModelSerializer):
     position_name = fields.SerializerMethodField(required=False)
 
     @staticmethod
-    def get_position_name(consultant: Employee):
-        return getattr(consultant.position, 'name', None)
+    def get_position_name(competition: Participant):
+        return getattr(competition.position, 'name', None)
 
     def validate(self, attrs):
-        data = super(ConsultantSerializer, self).validate(attrs)
+        data = super(ParticipantSerializer, self).validate(attrs)
         if not data['position'].id == 1:
             raise ValidationError({'position': "Position is not allowed"})
         return data
@@ -21,6 +21,6 @@ class ConsultantSerializer(serializers.ModelSerializer):
         print(**kwargs)
 
     class Meta:
-        model = Employee
+        model = Participant
         fields = ('id', 'name', 'position', 'position_name', 'identification', 'city', 'sex', 'age')
 
